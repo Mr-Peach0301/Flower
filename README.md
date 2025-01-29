@@ -77,7 +77,9 @@ To reproduce the results in RQ4, follow these steps:
 ```bash run_sft-gfn_logp.sh```
 
 3. Impact of Supervision Granularity
+
 ```bash run_sft-gfn_logp_n.sh```
 
-4. Performance Varying 𝜆
+5. Performance Varying 𝜆
+
 ```bash run_sft-gfn_logp_div_s_lambda.sh```
