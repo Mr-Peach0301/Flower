@@ -19,20 +19,27 @@ To install the project, follow these steps:
 The following steps use the Video Games dataset for example. The data required for training has already been provided in this repository.
 
 1. Download the dataset
+
 ```wget https://datarepo.eng.ucsd.edu/mcauley_group/data/amazon_v2/categoryFiles/Video_Games.json.gz```
+
 ```wget wget https://datarepo.eng.ucsd.edu/mcauley_group/data/amazon_v2/metaFiles2/meta_Video_Games.json.gz```
 
-2. Unzip
+3. Unzip
+
 ```gunzip Video_Games.json.gz```
+
 ```gunzip meta_Video_Games.json.gz```
 
-3. Preprocess for BIGRec and IFairLRS
+5. Preprocess for BIGRec and IFairLRS
+
 ```python ./code/process.py --category "Video_Games"```
 
-4. Preprocess for SASRec
+7. Preprocess for SASRec
+
 ```bash to_SASRec.sh```
 
-5. Preprocess for Flower
+9. Preprocess for Flower
+
 run the code in process.ipynb
 
 ## Next-item Recommendation Results (RQ2)
@@ -40,16 +47,21 @@ run the code in process.ipynb
 To reproduce the results in RQ2, follow these steps:
 
 1. Train SASRec
+
 ```bash run_SASRec.sh```
 
-2. Train and evaluate BIGRec
+3. Train and evaluate BIGRec
+
 ```bash run_sft.sh```
+
 ```bash evaluate_sft.sh```
 
-3. Train Flower
+5. Train Flower
+
 ```bash run_sft-gfn_logp_div_s.sh```
 
-4. Train IFairLRS
+7. Train IFairLRS
+
 ```bash item_side_reweight.sh```
 
 ## Analysis of Key Factors in Flower (RQ4)
@@ -57,12 +69,15 @@ To reproduce the results in RQ2, follow these steps:
 To reproduce the results in RQ4, follow these steps:
 
 1. Effects of Reward Setting
+
 ```bash run_sft-gfn_logp_div_s.sh```
+
 ```bash run_sft-gfn_logp_add_logs.sh```
+
 ```bash run_sft-gfn_logp.sh```
 
-2. Impact of Supervision Granularity
+3. Impact of Supervision Granularity
 ```bash run_sft-gfn_logp_n.sh```
 
-3. Performance Varying 𝜆
+4. Performance Varying 𝜆
 ```bash run_sft-gfn_logp_div_s_lambda.sh```
