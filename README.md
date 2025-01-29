@@ -9,10 +9,13 @@ To install the project, follow these steps:
 1. Clone this git repository and change directory to this repository.
 
 2. Create a conda environment and activate.
+
 ```conda create --name Flower python=3.9 -y```
+
 ```conda activate Flower```
 
-3. Install the required modules from pip.
+4. Install the required modules from pip.
+
 ```pip install -r requirements.txt```
 
 ## Data processing
