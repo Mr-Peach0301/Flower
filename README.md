@@ -14,14 +14,12 @@ To install the project, follow these steps:
 
 ```conda activate Flower```
 
-4. Install the required modules from pip.
+3. Install the required modules from pip.
 
 ```pip install -r requirements.txt```
 
 ## Data processing
 The following steps use the Video Games dataset for example. Due to file size limitations of GitHub, the files of training set are not uploaded to the repository, other files are available.
-
-```cd with_history```
 
 1. Download the dataset
 
@@ -29,21 +27,23 @@ The following steps use the Video Games dataset for example. Due to file size li
 
 ```wget wget https://datarepo.eng.ucsd.edu/mcauley_group/data/amazon_v2/metaFiles2/meta_Video_Games.json.gz```
 
-3. Unzip
+2. Unzip
 
 ```gunzip Video_Games.json.gz```
 
 ```gunzip meta_Video_Games.json.gz```
 
-5. Preprocess for BIGRec and IFairLRS
+```cd with_history```
+
+3. Preprocess for BIGRec and IFairLRS
 
 ```python ./code/process.py --category "Video_Games"```
 
-7. Preprocess for SASRec
+4. Preprocess for SASRec
 
 ```bash to_SASRec.sh```
 
-9. Preprocess for Flower
+5. Preprocess for Flower
 
 run the code in process.ipynb
 
@@ -57,17 +57,17 @@ To reproduce the results in RQ2, follow these steps:
 
 ```bash run_SASRec.sh```
 
-3. Train and evaluate BIGRec
+2. Train and evaluate BIGRec
 
 ```bash run_sft.sh```
 
 ```bash evaluate_sft.sh```
 
-5. Train Flower
+3. Train Flower
 
 ```bash run_sft-gfn_logp_div_s.sh```
 
-7. Train IFairLRS
+4. Train IFairLRS
 
 ```bash item_side_reweight.sh```
 
@@ -85,10 +85,10 @@ To reproduce the results in RQ4, follow these steps:
 
 ```bash run_sft-gfn_logp.sh```
 
-3. Impact of Supervision Granularity
+2. Impact of Supervision Granularity
 
 ```bash run_sft-gfn_logp_n.sh```
 
-5. Performance Varying 𝜆
+3. Performance Varying 𝜆
 
 ```bash run_sft-gfn_logp_div_s_lambda.sh```
