@@ -21,6 +21,8 @@ To install the project, follow these steps:
 ## Data processing
 The following steps use the Video Games dataset for example. Due to file size limitations of GitHub, the files of training set are not uploaded to the repository, other files are available.
 
+```cd with_history```
+
 1. Download the dataset
 
 ```wget https://datarepo.eng.ucsd.edu/mcauley_group/data/amazon_v2/categoryFiles/Video_Games.json.gz```
@@ -49,6 +51,8 @@ run the code in process.ipynb
 
 To reproduce the results in RQ2, follow these steps:
 
+```cd with_history```
+
 1. Train SASRec
 
 ```bash run_SASRec.sh```
@@ -70,6 +74,8 @@ To reproduce the results in RQ2, follow these steps:
 ## Analysis of Key Factors in Flower (RQ4)
 
 To reproduce the results in RQ4, follow these steps:
+
+```cd with_history```
 
 1. Effects of Reward Setting
 
