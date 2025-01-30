@@ -51,7 +51,7 @@ run the code in process.ipynb
 
 To reproduce the results in RQ2, follow these steps:
 
-```cd with_history```
+```cd /with_history```
 
 1. Train SASRec
 
@@ -71,11 +71,43 @@ To reproduce the results in RQ2, follow these steps:
 
 ```bash item_side_reweight.sh```
 
+## Flower as a Reference Policy (RQ3)
+
+To reproduce the results in RQ3, follow these steps:
+
+```cd /with_history/dpo```
+
+1. Data processing
+
+run the code in dpo_dataset.ipynb
+
+Due to file size limitations of GitHub, the files of training set are not uploaded to the repository, other files are available.
+
+2. BIGRec as a Reference Policy
+
+```bash dmpo.sh```
+
+```bash sdpo.sh```
+
+```bash ppo.sh```
+
+```bash rosedpo.sh```
+
+3. Flower as a Reference Policy
+
+```bash dmpo_gfn.sh```
+
+```bash sdpo_gfn.sh```
+
+```bash ppo_gfn.sh```
+
+```bash rosedpo_gfn.sh```
+
 ## Analysis of Key Factors in Flower (RQ4)
 
 To reproduce the results in RQ4, follow these steps:
 
-```cd with_history```
+```cd /with_history```
 
 1. Effects of Reward Setting
 
