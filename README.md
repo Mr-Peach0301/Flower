@@ -35,7 +35,7 @@ The following steps use the Video Games dataset for example. Due to file size li
 
 ```cd /with_history```
 
-3.Process for BIGRec and IFairLRS
+3. Process for BIGRec and IFairLRS
 
 ```python ./code/process.py --category "Video_Games"```
 
