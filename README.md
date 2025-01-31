@@ -33,17 +33,17 @@ The following steps use the Video Games dataset for example. Due to file size li
 
 ```gunzip meta_Video_Games.json.gz```
 
-```cd with_history```
+```cd /with_history```
 
-3. Preprocess for BIGRec and IFairLRS
+3.Process for BIGRec and IFairLRS
 
 ```python ./code/process.py --category "Video_Games"```
 
-4. Preprocess for SASRec
+4. Process for SASRec
 
 ```bash to_SASRec.sh```
 
-5. Preprocess for Flower
+5. Process for Flower
 
 run the code in process.ipynb
 
