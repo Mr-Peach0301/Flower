@@ -47,6 +47,34 @@ The following steps use the Video Games dataset for example. Due to file size li
 
 run the code in process.ipynb
 
+## Distribution Fitting Capability (RQ1)
+
+To reproduce the results in RQ1, follow these steps:
+
+1. Data processing
+
+run the code in /without_history/gfn/process.ipynb 
+
+2. Baseline
+
+```cd /without_history/base_line```
+
+```bash ./shell/train_sft_100.sh```
+
+```bash ./shell/train_sft_1500.sh```
+
+```bash ./shell/ppo.sh```
+
+```bash ./shell/dpo.sh```
+
+3. Flower
+
+```cd /without_history/gfn```
+
+```python train.py task=movie_all_param_1.5B_1500 device=gpu > movie_1.5B_0.00001_0.05.out &```
+
+```python train.py task=movie_all_param_3B_1500 device=gpu > movie_3B_0.00001_0.4.out &```
+
 ## Next-item Recommendation Results (RQ2)
 
 To reproduce the results in RQ2, follow these steps:
