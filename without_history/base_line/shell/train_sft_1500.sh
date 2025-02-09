@@ -7,7 +7,7 @@ val_data=./data/test_${num}.json
 possible_output_path=../${category}/${category}_${num}_title.txt
 real_token_distri=../${category}/select_${num}_${category}.json
 save_path=../${category}/${num}/bigrec
-CUDA_VISIBLE_DEVICES=7 nohup python ./train_gfn.py > log_${category}_bigrec_${num}.out \
+CUDA_VISIBLE_DEVICES=7 nohup python ./train_sft.py > log_${category}_bigrec_${num}.out \
     --base_model $base_model \
     --train_data_path [\'$train_data\']   \
     --val_data_path [\'$val_data\'] \
