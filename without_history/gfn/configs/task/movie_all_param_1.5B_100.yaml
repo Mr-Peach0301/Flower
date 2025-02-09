@@ -1,0 +1,45 @@
+name: "movie_all_param_1.5B_100"
+
+data:
+  path: "../base_line/data/train_100.json"
+  inference_path: "../base_line/data/test_100.json"
+  train_size: 0.95
+  token_distri_compute: "../Movies/select_100_Movies.json"
+  token_distri: "../Movies/Movies_100_token_distri_qwen2.5.json"
+
+model:
+  name: "qwen2.5-1.5b-instruct"
+  path: "/NAS/gaocm/llmhub/hf/Qwen/Qwen2.5-1.5B-Instruct"
+
+training:
+  subtb_lambda: 1.0
+  pf_temp_high: 2.0
+  pf_temp_low: 0.5
+  pf_temp_prob: 0.666
+  use_buffer_prob: 0
+  category: movie
+  lr: 0.00001
+  batch_size: 4
+  accumulate_grad_batches: 16
+  epochs: 50
+  use_4bit: False
+  threshold: 0.05
+  valid_path: "../Movies/100/gfn/"
+
+reward:
+  title_logp_path: "../Movies/Movies_100_title.txt"
+
+callbacks:
+  - _target_: lightning.pytorch.callbacks.ModelCheckpoint
+    dirpath: /NAS/mengyao/checkpoints/${now:%Y-%m-%d}_${now:%H-%M-%S}
+    filename: "epoch={epoch:03d}"
+    every_n_epochs: 50
+  - _target_: lightning.pytorch.callbacks.EarlyStopping
+    monitor: "val/loss"
+    mode: "min"
+    patience: 5
+
+constraints:
+  min_sentence_len: 1
+  max_sentence_len: 25
+  illegal_tokens: []

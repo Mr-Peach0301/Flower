@@ -1,0 +1,12 @@
+defaults:
+  - _self_
+  - task: openwebtext_gpt2
+  - device: gpu
+  - hydra: default
+
+seed: 27
+save_dir: "runs/"
+
+logger:
+  _target_: pytorch_lightning.loggers.TensorBoardLogger 
+  save_dir: 'logs/'
