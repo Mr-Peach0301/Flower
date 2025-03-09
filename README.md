@@ -1,6 +1,6 @@
-# Flow-guided Fine-Tuning for Diverse LLM-based Recommenders
+# Process-Supervised LLM Recommenders via Flow-guided Tuning
 
-This repository hosts the official PyTorch-based implementation of the method presented in the paper "Flow-guided Fine-Tuning for Diverse LLM-based Recommenders".
+This repository hosts the official PyTorch-based implementation of the method presented in the paper "Process-Supervised LLM Recommenders via Flow-guided Tuning".
 
 ## Installation
 
@@ -25,7 +25,7 @@ The following steps use the Video Games dataset for example. Due to file size li
 
 ```wget https://datarepo.eng.ucsd.edu/mcauley_group/data/amazon_v2/categoryFiles/Video_Games.json.gz```
 
-```wget wget https://datarepo.eng.ucsd.edu/mcauley_group/data/amazon_v2/metaFiles2/meta_Video_Games.json.gz```
+```wget https://datarepo.eng.ucsd.edu/mcauley_group/data/amazon_v2/metaFiles2/meta_Video_Games.json.gz```
 
 2. Unzip
 
