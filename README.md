@@ -19,7 +19,7 @@ To install the project, follow these steps:
 ```pip install -r requirements.txt```
 
 ## Data processing
-The following steps use the Video Games dataset for example. Due to file size limitations of GitHub, the files of training set are not uploaded to the repository, other files are available.
+Due to file size limitations of GitHub, the files of training set are not uploaded to the repository, other files are available. The following steps describe our data processing procedure, using the Video Games dataset as an example.
 
 1. Download the dataset
 
