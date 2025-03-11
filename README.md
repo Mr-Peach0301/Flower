@@ -71,7 +71,7 @@ run the code in /without_history/gfn/process.ipynb
 
 ```cd /without_history/gfn```
 
-```python train.py task=movie_all_param_1.5B_1500 device=gpu > movie_1.5B_0.00001_0.05.out &```
+```python train.py task=movie_all_param_1.5B_100 device=gpu > movie_1.5B_0.00001_0.05.out &```
 
 ```python train.py task=movie_all_param_3B_1500 device=gpu > movie_3B_0.00001_0.4.out &```
 
