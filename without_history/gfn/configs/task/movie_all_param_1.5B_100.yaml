@@ -8,8 +8,8 @@ data:
   token_distri: "../Movies/Movies_100_token_distri_qwen2.5.json"
 
 model:
-  name: "qwen2.5-1.5b-instruct"
-  path: "/NAS/gaocm/llmhub/hf/Qwen/Qwen2.5-1.5B-Instruct"
+  name: "qwen2.5-1.5B-instruct"
+  path: "YOUR_MODEL_PATH_1.5B"
 
 training:
   subtb_lambda: 1.0
@@ -31,7 +31,7 @@ reward:
 
 callbacks:
   - _target_: lightning.pytorch.callbacks.ModelCheckpoint
-    dirpath: /NAS/mengyao/checkpoints/${now:%Y-%m-%d}_${now:%H-%M-%S}
+    dirpath: ./checkpoints/${now:%Y-%m-%d}_${now:%H-%M-%S}
     filename: "epoch={epoch:03d}"
     every_n_epochs: 50
   - _target_: lightning.pytorch.callbacks.EarlyStopping
